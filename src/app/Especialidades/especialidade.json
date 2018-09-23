@@ -1,0 +1,33 @@
+{
+    "Fisioterapeuta": {
+        "Acupuntura": {},
+        "Aquática": {},
+        "Cardiovascular": {},
+        "Dermatofuncional": {},
+        "Esportiva": {},
+        "Gerontologia": {},
+        "do Trabalho": {},
+        "Neurofuncional": {},
+        "Oncologia": {},
+        "Respiratória": {},
+        "Traumato-Ortopédica": {},
+        "Osteopatia": {},
+        "Quiropraxia": {},
+        "Saúde da Mulher": {},
+        "Terapia Intensiva": {}
+    },
+    "Fonoaudiólogo": {
+        "Audição": {},
+        "Disfagia": {},
+        "Fonoaudiologia Educacional": {},
+        "Linguagem": {},
+        "Motricidade Orofacial": {},
+        "Saúde Coletiva": {},
+        "Voz": {},
+        "Fonoaudiologia Neurofuncional": {},
+        "Fonoaudiologia do Trabalho": {},
+        "Gerontologia": {},
+        "Neuropsicologia": {},
+        "Fluência": {}
+    }
+}
