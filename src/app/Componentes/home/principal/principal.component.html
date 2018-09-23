@@ -3,13 +3,14 @@
     <div class="container">
         <label class="caixa-txt mt-2">{{nome}}:</label>
         <select #slt class="form-control" autofocus (click)="selecionar(slt.value)">
-            <option [value]="null"></option>
+            <option></option>
             <option *ngFor="let comp of lista; let i = index" [value]="i">
                 {{comp}}
             </option>
         </select>
-    </div>
 
+        <app-profissoes [especialidade]="_especialidade"></app-profissoes>
+    </div>
     <!-- <app-atendimento [rota]="_rota"></app-atendimento>
     <app-prevencao [rota]="_rota"></app-prevencao> -->
 </div>

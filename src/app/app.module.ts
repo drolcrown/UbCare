@@ -12,6 +12,7 @@ import { AtendimentoComponent } from './Componentes/home/atendimento/atendimento
 import { PrevencaoComponent } from './Componentes/home/prevencao/prevencao.component';
 import { PrincipalComponent } from './Componentes/home/principal/principal.component';
 import { NavegacaoComponent } from './Componentes/home/navegacao/navegacao.component';
+import { ProfissoesComponent } from './Componentes/home/profissoes/profissoes.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavegacaoComponent } from './Componentes/home/navegacao/navegacao.compo
     PrevencaoComponent,
     PrincipalComponent,
     NavegacaoComponent,
+    ProfissoesComponent,
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule,

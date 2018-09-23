@@ -9,9 +9,10 @@ import { SituacaoClinica } from '../../../Especialidades/situacaoClinica';
 })
 export class PrincipalComponent implements OnInit {
   public _rota;
-  private sit = new SituacaoClinica();
+  private sit = new  SituacaoClinica();
   private lista = [];
   private nome = "";
+  private _especialidade = null;
 
   constructor(public route: ActivatedRoute, public router: Router) { }
 
@@ -27,4 +28,9 @@ export class PrincipalComponent implements OnInit {
       }
       console.log(this._rota)
   }
+
+  private selecionar(valor){
+    this._especialidade = this.lista[valor];
+  }
+  
 }
