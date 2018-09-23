@@ -1,3 +1,21 @@
-<div *ngIf="'assistencia' == _rota">
-    <h1>Assistencia</h1>
+<div class="container" *ngIf="'assistencia' == _rota">
+    <!-- <div class=" row mt-3 justify-content-center col-12">
+        <div class="row col-12 mb-4">
+            <img src="./../../../assets/icons/lupa.svg" class="icones-md col-1">
+            <input class="btn col-11 border border-primary" placeholder="Digite aqui">
+        </div>
+        <small class="col-12">Situação Clínica:</small>
+        <div class="col-12 mt-1" *ngFor="let comp of lista">
+            <a class="col-12 btn btn-primary">{{comp}}</a>
+        </div>
+    </div> -->
+
+
+    <label class="caixa-txt">Situação Clínica:</label>
+    <select #slt class="form-control" autofocus (click)="selecionar(slt.value)">
+      <option [value]="null"></option>
+      <option *ngFor="let comp of lista; let i = index" [value]="i">
+        {{comp}}
+      </option>
+    </select>
 </div>

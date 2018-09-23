@@ -1,6 +1,16 @@
 <div>
     <app-navegacao></app-navegacao>
-    <app-atendimento [rota]="_rota"></app-atendimento>
-    <app-prevencao [rota]="_rota"></app-prevencao>
+    <div class="container">
+        <label class="caixa-txt mt-2">{{nome}}:</label>
+        <select #slt class="form-control" autofocus (click)="selecionar(slt.value)">
+            <option [value]="null"></option>
+            <option *ngFor="let comp of lista; let i = index" [value]="i">
+                {{comp}}
+            </option>
+        </select>
+    </div>
+
+    <!-- <app-atendimento [rota]="_rota"></app-atendimento>
+    <app-prevencao [rota]="_rota"></app-prevencao> -->
 </div>
-    <!-- <app-fluxo-de-conversa [rota]="_tipoDeRota"></app-fluxo-de-conversa> -->
+<!-- <app-fluxo-de-conversa [rota]="_tipoDeRota"></app-fluxo-de-conversa> -->

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SituacaoClinica } from '../../../Especialidades/situacaoClinica';
 
 @Component({
   selector: 'app-atendimento',
@@ -16,6 +17,7 @@ export class AtendimentoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

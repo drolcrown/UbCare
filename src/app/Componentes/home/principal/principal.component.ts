@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SituacaoClinica } from '../../../Especialidades/situacaoClinica';
 
 @Component({
   selector: 'app-principal',
@@ -8,11 +9,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PrincipalComponent implements OnInit {
   public _rota;
+  private sit = new SituacaoClinica();
+  private lista = [];
+  private nome = "";
 
   constructor(public route: ActivatedRoute, public router: Router) { }
 
   ngOnInit() {
       this._rota = this.route.snapshot.paramMap.get('rota');
+      if(this._rota == 'assistencia'){
+        this.lista = this.sit.situacaoClinica;
+        this.nome = "Situação Clínica";
+      }
+      if(this._rota == 'prevencao'){
+        this.lista = this.sit.areaDeAtuacao;
+        this.nome = "Prevenção";
+      }
       console.log(this._rota)
   }
 }
