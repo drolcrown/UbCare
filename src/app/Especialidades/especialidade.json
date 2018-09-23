@@ -29,5 +29,46 @@
         "Gerontologia": {},
         "Neuropsicologia": {},
         "Fluência": {}
-    }
+    },
+    "Enfermagem": {
+        "Cardiologia",
+        "Dermatológica",
+        "Doenças infecciosas e parasitarias",
+        "Infecção Hospitalar",
+        "Nutrição Parenteral e Enteral",
+        "Oncologia",
+        "Saúde Complementar a criança, adolescentes, adulto (homem e mulher) e idoso",
+        "Saúde do Trabalhador",
+        "Saúde Indígena",
+        "Sexologia Humana",
+        "Terapia Intensiva",
+        "Urgência e Emergência"
+    }, 
+    "Técnico/auxiliar de enfermagem":{
+        "Atividades de assistência ao cuidado do paciente",
+        "Prevenção e na execução de programas de assistência integral à saúde",
+        "Realizar e fiscalizar a higiene do paciente",
+        "Primeiros socorros em situações de emergência",
+        "Administrar medicamentos",
+        "Monitorador de dados vitais"
+    },
+    "Psicologia": {
+        "Educacional ou Escolar",
+        "Organizacional e do Trabalho",
+        "Trânsito",
+        "Jurídica",
+        "Esporte",
+        "Clínica",
+        "Psicopedagogia",
+        "Psicomotricidade",
+        "Social",
+        "Neuropsicologia"
+    },
+    "Educação física": {
+        "Condicionamento físico",
+        "Esportes": {especialização em modalidades esportivas nas mais diversas áreas},
+        "Gestão",
+        "Performance",
+        "Recreação",
+        }
 }
