@@ -1,5 +1,5 @@
 <div>
-    <app-navegacao [rota]="_rotaAnterior" [titulo]="_rota"></app-navegacao>
+    <app-navegacao [rota]="_rotaAnterior" [titulo]="_rota" [ativarMenu]="true"></app-navegacao>
     <div class="container">
         <label class="caixa-txt mt-2">{{nome}}:</label>
         <select #slt class="form-control" autofocus (click)="selecionar(slt.value)">

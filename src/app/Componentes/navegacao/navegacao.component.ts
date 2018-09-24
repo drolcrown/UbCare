@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class NavegacaoComponent implements OnInit {
   private _rota;
   private _titulo = "UberCare";
+  private _ativarMenu;
   private _estilo = {};
 
   @Input()
@@ -20,17 +21,21 @@ export class NavegacaoComponent implements OnInit {
   public set titulo(valor){
     if(valor){
       this._titulo = valor;
+      this._ativarMenu = true;
     }
+  }
+
+  @Input()
+  public set ativarMenu(valor){
+      this._ativarMenu = valor;
   }
 
   constructor(public router: Router) { }
 
   ngOnInit() {
-    if(!this._rota){
-      console.log("enrtea")
+    if(!this._ativarMenu){
       this._estilo = {
-        marginLeft: '50%',
-        marginRight: '50%',
+        marginLeft: '40%',
       }
     }
   }

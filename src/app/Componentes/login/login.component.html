@@ -1,10 +1,10 @@
 <form *ngIf="form" [formGroup]="form" (ngSubmit)="enviarResposta()">
-    <app-navegacao [rota]="" [titulo]=""></app-navegacao>
+    <app-navegacao [rota]="" [titulo]="" [ativarMenu]="false"></app-navegacao>
     <!-- <h1 class="text-center bg-dark text-white">UberCare</h1> -->
 
     <div class="container-fly">
         <div class="container col-8">
-            <img class="col-12 img-circulo mx-auto d-block icones-lg" src="../../../assets/icons/user3.svg" />
+            <img class="col-12 img-circulo mx-auto d-block icones-lg" src="../../../assets/icons/user.svg" />
             <label for="formGroupExampleInput" class="caixa-txt">Usuario:</label>
             <input formControlName="usuario" type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu login"
                 required autocomplete="off" autofocus>
@@ -13,8 +13,8 @@
                 required autocomplete="off" autofocus minlength="8">
         </div>
         <div class="text-center mt-4 mb-2">
-            <a [routerLink]="['/home']" class="btn btn-primary mt-2 mr-2">Entrar</a>
-            <a [routerLink]="['/cadastro']" class="btn btn-primary mt-2">
+            <a [routerLink]="['/home']" class="btn btn-dark mt-2 mr-2">Entrar</a>
+            <a [routerLink]="['/cadastro']" class="btn btn-dark mt-2">
                 Cadastrar-se
             </a>
         </div>
