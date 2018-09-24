@@ -1,0 +1,22 @@
+<div class="navbar navbar-dark bg-dark ">
+  <div *ngIf="_rota" ngbDropdown class="d-inline-block">
+    <a class="navbar-toggler" id="dropdownBasic1" ngbDropdownToggle>
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button routerLink="/perfil" class="dropdown-item">Perfil</button>
+      <button class="dropdown-item">Configurações</button>
+      <button class="dropdown-item">Minhas Consultas</button>
+      <button class="dropdown-item">Sair</button>
+    </div>
+  </div>
+  <div class="row">
+    <!-- <img src="./../../../assets/icons/pharmacy.svg" class="icones-md col-1"> -->
+    <h1 class="text-white" [ngStyle]="_estilo">{{_titulo}}</h1>
+  </div>
+  <div *ngIf="_rota" class="float-right">
+    <a (click)="fecharPagina()" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </a>
+  </div>
+</div>

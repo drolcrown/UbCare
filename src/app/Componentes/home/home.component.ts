@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,9 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Output()
-  public classes;
-  public _rota = 'inicio';
+  public _rotaAnterior = "login";
 
-  constructor(public route: ActivatedRoute, public router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
     this.router.navigate(['/home']);

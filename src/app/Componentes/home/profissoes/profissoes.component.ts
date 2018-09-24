@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Especialidades } from '../../../Modelos/especialidade';
 
 @Component({
   selector: 'app-profissoes',
@@ -6,17 +7,23 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./profissoes.component.css']
 })
 export class ProfissoesComponent implements OnInit {
-  private _especialidade;
+  private _especialidade;  
 
   @Input()
   public set especialidade(value){
-    this._especialidade = value;
+    if(value){
+      this._especialidade = Object.values(value);
+    }
+    else{
+      this._especialidade = [];
+    }
   }
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this._especialidade)
+    // console.log(this._especialidade = Object.keys(new Especialidades().Enfermeiro));
+
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SituacaoClinica } from '../../../Especialidades/situacaoClinica';
+import { SituacaoClinica } from '../../../Modelos/situacaoClinica';
 
 @Component({
   selector: 'app-principal',
@@ -13,6 +13,7 @@ export class PrincipalComponent implements OnInit {
   private lista = [];
   private nome = "";
   private _especialidade = null;
+  private _rotaAnterior = "home";
 
   constructor(public route: ActivatedRoute, public router: Router) { }
 
@@ -26,7 +27,6 @@ export class PrincipalComponent implements OnInit {
         this.lista = this.sit.areaDeAtuacao;
         this.nome = "Prevenção";
       }
-      console.log(this._rota)
   }
 
   private selecionar(valor){

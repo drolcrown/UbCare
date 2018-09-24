@@ -1,0 +1,19 @@
+<div>
+  <app-navegacao [rota]="_rotaAnterior" [titulo]="_tipoDeCadastro"></app-navegacao>
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="enviarResposta()" class="container">
+    <div class="form-group mt-3" *ngFor="let componente of _formLista">
+      <label for="formGroupExampleInput" class="caixa-txt">{{componente}}:</label>
+      <input type="text" placeholder="{{componente}}" class="form-control">
+      <!-- <div [ngSwitch]="component.sufixo">
+        <input *ngSwitchDefault formControlName="{{component.name}}" type="text" class="form-control" placeholder="{{component.name}}"
+          autocomplete="off" autofocus>
+        <input *ngSwitchCase="'dh'" max="2999-12-31" formControlName="{{component.name}}" type="date" class="form-control"
+          placeholder="{{component.name}}" autocomplete="off" autofocus>
+      </div> -->
+    </div>
+    <div class="text-center mt-5 mb-3">
+      <button type="submit" class="btn btn-primary mr-2" [disabled]="formLimpo()">Enviar</button>
+      <button type="reset" class="btn btn-primary" [disabled]="formLimpo()">Limpar</button>
+    </div>
+  </form>
+</div>

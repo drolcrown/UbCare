@@ -1,5 +1,5 @@
 <div>
-    <app-navegacao></app-navegacao>
+    <app-navegacao [rota]="_rotaAnterior" [titulo]="_rota"></app-navegacao>
     <div class="container">
         <label class="caixa-txt mt-2">{{nome}}:</label>
         <select #slt class="form-control" autofocus (click)="selecionar(slt.value)">
@@ -8,10 +8,9 @@
                 {{comp}}
             </option>
         </select>
-
         <app-profissoes [especialidade]="_especialidade"></app-profissoes>
     </div>
-    <!-- <app-atendimento [rota]="_rota"></app-atendimento>
-    <app-prevencao [rota]="_rota"></app-prevencao> -->
 </div>
-<!-- <app-fluxo-de-conversa [rota]="_tipoDeRota"></app-fluxo-de-conversa> -->
+
+
+

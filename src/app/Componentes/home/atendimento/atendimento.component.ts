@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SituacaoClinica } from '../../../Especialidades/situacaoClinica';
 
 @Component({
   selector: 'app-atendimento',
