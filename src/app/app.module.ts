@@ -18,6 +18,11 @@ import { LoginComponent } from './Componentes/login/login.component';
 import { FormulariosComponent } from './Componentes/formularios/formularios.component';
 import { PerfilComponent } from './Componentes/perfil/perfil.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { CrudService } from './services/crud.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +39,11 @@ import { PerfilComponent } from './Componentes/perfil/perfil.component';
   ],
   imports: [
     NgbModule, BrowserModule, FormsModule, ReactiveFormsModule,
-    HttpClientModule, RouterModule.forRoot(ROUTES)
+    HttpClientModule, RouterModule.forRoot(ROUTES),
+    AngularFireModule.initializeApp(environment.FirebaseConfig),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [CrudService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

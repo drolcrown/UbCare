@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-formularios',
@@ -15,7 +16,8 @@ export class FormulariosComponent implements OnInit {
   private _formLista;
   
 
-  constructor(public route: ActivatedRoute, private builder: FormBuilder, private router: Router) { 
+  constructor(public route: ActivatedRoute, private builder: FormBuilder,
+    private router: Router, private db: CrudService) { 
   }
 
   ngOnInit() {
@@ -59,4 +61,21 @@ export class FormulariosComponent implements OnInit {
     }
     return true;
   }
+
+  private enviarResposta(){
+    this.router.navigate(['/login']);
+    this.db.inserir('perfil', this.form.value);
+    console.log("Cadastro Criado")
+  }
 }
+
+
+// {nome: "Nome"; tipo: "text"};
+// {nome: "Idade"; tipo: "text"};
+// {nome: "Sexo"; tipo: "text"};
+// {nome: "Email"; tipo: "text"},
+// {nome: "Telefone"; tipo: "text"},
+// {nome: "Endereco"; tipo: "text"},
+// {nome: "Cep"; tipo: "text"},
+// {nome: "Conselho"; tipo: "text"},
+// {nome: "Especialidade"; tipo: "text"}

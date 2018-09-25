@@ -1,7 +1,6 @@
 <form *ngIf="form" [formGroup]="form" (ngSubmit)="enviarResposta()">
     <app-navegacao [rota]="" [titulo]="" [ativarMenu]="false"></app-navegacao>
     <!-- <h1 class="text-center bg-dark text-white">UberCare</h1> -->
-
     <div class="container-fly">
         <div class="container col-8">
             <img class="col-12 img-circulo mx-auto d-block icones-lg" src="../../../assets/icons/user.svg" />
@@ -14,10 +13,10 @@
                 required autocomplete="off" autofocus minlength="8">
         </div>
         <div class="text-center mt-4 mb-2">
-            <a [routerLink]="['/home']" class="btn btn-dark mt-2 mr-2">Entrar</a>
-            <a [routerLink]="['/cadastro']" class="btn btn-dark mt-2">
+            <button type="submit" class="btn btn-dark mt-2 mr-2">Entrar</button>
+            <button type="button" [routerLink]="['/cadastro']" class="btn btn-dark mt-2">
                 Cadastrar-se
-            </a>
+            </button>
         </div>
     </div>
 </form>
