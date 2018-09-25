@@ -20,10 +20,12 @@ export class PrincipalComponent implements OnInit {
   ngOnInit() {
       this._rota = this.route.snapshot.paramMap.get('rota');
       if(this._rota == 'assistencia'){
+        this._rota = "Assistencia";
         this.lista = this.sit.situacaoClinica;
         this.nome = "Situação Clínica";
       }
       if(this._rota == 'prevencao'){
+        this._rota = "Prevencao";
         this.lista = this.sit.areaDeAtuacao;
         this.nome = "Prevenção";
       }

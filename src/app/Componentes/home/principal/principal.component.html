@@ -8,9 +8,16 @@
                 {{comp}}
             </option>
         </select>
+        <div class="d-flex justify-content-around mt-3">
+            <div>
+                <input type="radio" id="domicilio" name="radioBt" value="domicilio">
+                <label for="domicilio">Atendimento Domiciliar</label>
+            </div>
+            <div>
+                <input type="radio" id="clinica" name="radioBt" value="clinica" />
+                <label for="clinica">Atendimento em Clínica</label>
+            </div>
+        </div>
         <app-profissoes [especialidade]="_especialidade"></app-profissoes>
     </div>
 </div>
-
-
-
