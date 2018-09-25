@@ -35,7 +35,7 @@ export class NavegacaoComponent implements OnInit {
   ngOnInit() {
     if(!this._ativarMenu){
       this._estilo = {
-        marginLeft: '40%',
+        marginLeft: '45%',
       }
     }
   }

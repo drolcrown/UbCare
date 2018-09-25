@@ -1,3 +1,28 @@
 <div>
   <app-navegacao [rota]="_rotaAnterior" [titulo]="'Meu Perfil'"></app-navegacao>
-</div>
+  <div class="container-fluid">
+    <div class="row col-12 mt-2" [ngStyle]="_perfilCss">
+      <div class="col-4">
+        <div class="mt-5">
+          <img class="col-12 img-circulo mx-auto d-block icones-lg" src="../../../assets/icons/user.svg" />
+        </div>
+        <div class="mt-5">
+          <h3 class="text-center mt-2">Nome De Usuario</h3>
+          <h4 class="text-center mt-5">Email De Usuario</h4>
+        </div>
+        <div class="col-12 row mt-5 justify-content-center">
+          <b class="col-6 text-center ml-1">Avaliação de Usuário:</b>
+          <ngb-rating [(rate)]="currentRate" class="col-5">
+            <ng-template let-fill="fill" let-index="index">
+              <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+            </ng-template>
+          </ngb-rating>
+          <hr>
+          <pre><b>Pontuação: {{currentRate}}</b></pre>
+        </div>
+      </div>
+      <div class="col-8 bg-warning">
+
+      </div>
+    </div>
+  </div>

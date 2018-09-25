@@ -1,5 +1,5 @@
 <div>
-  <app-navegacao [rota]="_rotaAnterior" [titulo]="_tipoDeCadastro" [ativarMenu]=false></app-navegacao>
+  <app-navegacao [rota]="_rotaAnterior" [titulo]="_tipoDeCadastro" [ativarMenu]="false"></app-navegacao>
   <form *ngIf="form" [formGroup]="form" (ngSubmit)="enviarResposta()" class="container">
     <div class="form-group mt-3" *ngFor="let componente of _formLista">
       <label for="formGroupExampleInput" class="caixa-txt">{{componente}}:</label>

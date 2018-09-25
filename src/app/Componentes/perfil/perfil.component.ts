@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
   private _rotaAnterior = "home";
+  private _perfilCss = {
+    height: (window.screen.height - 240) + 'px'
+  }
 
   constructor() { }
 
