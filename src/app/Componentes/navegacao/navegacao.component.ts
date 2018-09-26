@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavegacaoComponent implements OnInit {
   private _rota;
-  private _titulo = "HomeCare";
+  private _titulo = "HomeHealth";
   private _subtitulo = "A saúde ao seu alcance!";
   private _ativarMenu;
   private _estilo = {};
