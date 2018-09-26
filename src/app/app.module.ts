@@ -22,12 +22,14 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { CrudService } from './services/crud.service';
+import { AdminComponent } from './Componentes/admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
     HomeComponent,
+    AdminComponent,
     AtendimentoComponent,
     PrevencaoComponent,
     PrincipalComponent,
