@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
   tipoComponent: any;
   objComponent: any;
   nomeComponent: string;
+  _altura = {
+    height: window.innerHeight + 'px'
+  };
 
   constructor( private builder: FormBuilder, private router: Router, db: CrudService) {
     this.form = this.builder.group({
