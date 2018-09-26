@@ -1,0 +1,12 @@
+<div>
+  <app-navegacao [rota]="'login'" [titulo]="'Administrador'" [ativarMenu]="false"></app-navegacao>
+  <div class="container mt-2">
+    <label class="caixa-txt mt-2">Selecione um dos modelos:</label>
+    <select #slt class="form-control" autofocus (click)="selecionar(slt.value)">
+      <option></option>
+      <option *ngFor="let comp of lista" [value]="comp.constructor.name">
+        {{comp.constructor.name}}
+      </option>
+    </select>
+  </div>
+</div>

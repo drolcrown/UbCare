@@ -3,7 +3,7 @@
     <!-- <h1 class="text-center bg-dark text-white">UberCare</h1> -->
     <div class="container-fly">
         <div class="container col-8">
-            <img class="col-12 img-circulo mx-auto d-block icones-lg" src="../../../assets/icons/user.svg" />
+            <img [routerLink]="['/admin']" class="col-12 img-circulo mx-auto d-block icones-lg" src="../../../assets/icons/user.svg" />
             <label for="formGroupExampleInput" class="caixa-txt">Usuario:</label>
             <input formControlName="usuario" type="text" class="form-control border border-secondary"
              id="formGroupExampleInput" placeholder="Digite seu login"
