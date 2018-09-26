@@ -1,4 +1,4 @@
-<div class="navbar navbar-dark bg-dark ">
+<div class="navbar navbar-dark bg-azul ">
   <div *ngIf="_ativarMenu" ngbDropdown class="d-inline-block">
     <a class="navbar-toggler" id="dropdownBasic1" ngbDropdownToggle>
       <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,10 @@
     </div>
   </div>
     <!-- <img src="./../../../assets/icons/pharmacy.svg" class="icones-md col-1"> -->
-  <h1 class="text-white" [ngStyle]="_estilo">{{_titulo}}</h1>
+  <div [ngStyle]="_estilo" class="text-center">
+    <h1 class="text-white">{{_titulo}}</h1>
+    <h5 class="text-white">{{_subtitulo}}</h5>
+  </div>
   <div *ngIf="_rota" class="float-right">
     <a (click)="fecharPagina()" class="close" aria-label="Close">
       <span aria-hidden="true">&times;</span>

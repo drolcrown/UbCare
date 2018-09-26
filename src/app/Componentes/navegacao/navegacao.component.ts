@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class NavegacaoComponent implements OnInit {
   private _rota;
   private _titulo = "UberCare";
+  private _subtitulo = "A saúde ao seu alcance!";
   private _ativarMenu;
   private _estilo = {};
 
@@ -35,7 +36,7 @@ export class NavegacaoComponent implements OnInit {
   ngOnInit() {
     if(!this._ativarMenu){
       this._estilo = {
-        marginLeft: '45%',
+        marginLeft: '40%',
       }
     }
   }
