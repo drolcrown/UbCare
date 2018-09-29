@@ -12,6 +12,14 @@
             </div>
           </div>
         </div>
+        <div *ngSwitchCase="'checkbox'">
+          <label class="caixa-txt mt-2">Selecione um dos {{comp.nome}}:</label>
+          <div class="form-control" *ngFor="let comp1 of comp.valor">
+            <input type="checkbox" id="scales" name="feature"
+                   value="scales" checked />
+            <label for="scales">Scales</label>
+          </div>
+        </div>
         <div *ngSwitchCase="'array'">
           <label class="caixa-txt mt-2">Selecione um dos {{comp.nome}}:</label>
           <select #slt class="form-control" autofocus>

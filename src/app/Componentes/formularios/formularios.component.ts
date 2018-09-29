@@ -16,6 +16,7 @@ export class FormulariosComponent implements OnInit {
   private _listaFormulario;
   private _nome;
   private _lista = new ListaDeModelos().getModelo;
+  private _profissionais;
 
 
   constructor(public route: ActivatedRoute, private builder: FormBuilder,
@@ -23,6 +24,8 @@ export class FormulariosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._profissionais = this.db.getLista('profissional');
+    // console.log(this._profissionais[])
     //this.route.snapshot.url[0].path retorna o caminho da primeira rota acessada
     this._rotaAnterior = this.route.snapshot.url[0].path;
     this._tipoDeCadastro = this.route.snapshot.paramMap.get('rota');

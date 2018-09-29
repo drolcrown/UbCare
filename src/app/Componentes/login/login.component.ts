@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { CrudService } from '../../services/crud.service';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
     height: window.innerHeight + 'px'
   };
 
-  constructor( private builder: FormBuilder, private router: Router, db: CrudService) {
+  constructor( private builder: FormBuilder, private router: Router, private db: CrudService) {
     this.form = this.builder.group({
       usuario: ['', Validators.required ],
       senha: ['', Validators.required ],
@@ -25,7 +26,13 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+    // let fire = this.firebase.database.ref();
+    // console.log(fire.
+    // ]
+  console.log('Usuario : ',this.db.getLista('usuario'));
+  console.log('Profissional', this.db.getLista('profissional'));
+  
+}
 
   formLimpo() {
     if (this.form.controls.usuario.invalid && this.form.controls.senha.invalid) {

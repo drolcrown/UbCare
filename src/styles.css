@@ -12,6 +12,16 @@ p {
     white-space: normal !important;
 }
 
+.bg-wheat{
+    background: wheat;
+}
+
+.shadow1{
+    -webkit-box-shadow: 5px 5px 5px 5px  rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    5px 5px 5px 5px  rgba(50, 50, 50, 0.77);
+    box-shadow:         5px 5px 5px 5px rgba(50, 50, 50, 0.77);
+}
+
 .img-circulo {
     border-radius: 50%;
     overflow: hidden;
